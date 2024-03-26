@@ -1,0 +1,78 @@
+<section class="container pt-2">
+    <form onsubmit="app.HousesController.AddHouse()" class="row justify-content-center">
+        <div class="col-8">
+            <div class="row bg-white rounded">
+                <div class="col-4">
+                    <label for="">Year</label>
+                    <input type="number" name="year" class="form-control" minlength="4" maxlength="4" required
+                        placeholder="2000">
+                </div>
+                <div class="col-4">
+                    <label for="">Bedrooms</label>
+                    <input type="number" name="bedrooms" class="form-control" minlength="1" required placeholder="3">
+                </div>
+                <div class="col-4">
+                    <label for="">Bathrooms</label>
+                    <input type="number" name="bathrooms" class="form-control" minlength="1" required placeholder="2">
+                </div>
+                <div class="col-4">
+                    <label for="">Square Feet</label>
+                    <input type="number" name="sqft" class="form-control" minlength="1" required placeholder="1000">
+                </div>
+                <div class="col-4">
+                    <label for="">$Price</label>
+                    <input type="number" name="price" class="form-control" minlength="1" required placeholder="$0">
+                </div>
+                <div class="col-4">
+                    <label for="">Description</label>
+                    <input type="text" name="description" class="form-control" minlength="1" required
+                        placeholder="Some details">
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="">Image URL of House</label>
+                    <input type="url" name="imgUrl" class=" form-control" required>
+                </div>
+                <div class="mb-2">
+                    <button type="submit" class="btn btn-primary">List</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+<section class="container">
+    <div class="row py-2" id="houses-list">
+        <!-- <div class="col-6 card p-2">
+            <div class="p-2">
+                <img class="card-img-top" src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="">
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="px-2">Year: 2000</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="px-2">Bedrooms: 3</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="px-2">Bathrooms: 1</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="px-2">Square Ft: 1000</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="px-2">Price: $1</div>
+                    </div>
+                </div>
+                <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vel doloribus quod
+                    voluptatibus
+                    repellendus error sint a quisquam. Dicta ut odio in consequatur, tenetur a earum corrupti fuga rerum
+                    distinctio?</div>
+            </div>
+            <div class="p-2">
+                <button onclick="app.HousesController.RemoveListing()" class="btn btn-primary">Buy</button>
+                <button onclick="app.HousesController.RemoveListing()" class="btn btn-danger">Delete Listing</button>
+            </div>
+        </div> -->
+    </div>
+</section>

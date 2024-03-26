@@ -7,14 +7,14 @@ import { getFormData } from "../utils/FormHandler.js";
 
 export class CarsController {
   constructor() {
-    console.log('🚗🎮 loaded');
+    //console.log('🚗🎮 loaded');
     carsService.loadCars()
     this.drawCars()
   }
 
 
   drawCars() {
-    console.log('drawing the 🚗🚗🚗');
+    //console.log('drawing the 🚗🚗🚗');
     const cars = AppState.cars // grab cars from the appstate
     let carsHTML = '' // create a placeholder, to add all the cars too
     // cars.forEach(car => carsHTML += `${car.make}|${car.model} .`) // start by drawing something small to test
@@ -31,14 +31,14 @@ export class CarsController {
     // console.log(getFormData(event.target)) // use utility to create object with key value pairs, from our input 'names' and 'values
 
     let carData = getFormData(event.target)
-    console.log('Creating a new Car listing', carData);
+    //console.log('Creating a new Car listing', carData);
     carsService.createCar(carData)
     event.target.reset() // clears out the form so we can enter more data in and create more cars!
     this.drawCars()
   }
 
   deleteCar(carId) {
-    console.log('deleting', carId);
+    //console.log('deleting', carId);
     carsService.deleteCar(carId)
     this.drawCars()
   }

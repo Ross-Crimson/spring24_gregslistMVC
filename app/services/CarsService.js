@@ -30,13 +30,13 @@ class CarsService {
 
   loadCars() {
     let dataString = localStorage.getItem('cars') // pulls a string of data out of the local storage
-    console.log('🕴️01010001010', dataString);
+    //console.log('🕴️01010001010', dataString);
     const carsData = JSON.parse(dataString) // converts the string into POJOS
-    console.log('🥷 The Car is starting to believe', carsData);
+    //console.log('🥷 The Car is starting to believe', carsData);
     if (carsData == null) return // if there is no data, stop the function early
 
     const cars = carsData.map(car => new Car(car))
-    console.log('🚗🚗🥷', cars);
+    //console.log('🚗🚗🥷', cars);
     AppState.cars = cars // no push here, because we don't want to add an array INTO and array, be re-assign our appstate to equal what came out of the local storage
   }
 }
