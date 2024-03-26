@@ -1,5 +1,6 @@
 import { Car } from './models/Car.js'
 import { House } from './models/House.js'
+import { Job } from './models/Job.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -50,6 +51,15 @@ class ObservableAppState extends EventEmitter {
       price: 375000,
       description: 'Newly renovated mid-century modern home',
       imgUrl: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg'
+    })
+  ]
+
+  jobs = [
+    new Job({
+      title: 'Programmer',
+      description: 'Come make stuff in code and bang your head against the wall. :)',
+      pay: 10000,
+      remote: false
     })
   ]
 

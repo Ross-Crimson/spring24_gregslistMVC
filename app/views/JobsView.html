@@ -1,0 +1,57 @@
+<section class="container">
+    <div class="row p-2 justify-content-evenly">
+        <div class="col-2">
+            <h4>Looking to Hire?</h4>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Post New Job</button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Job Listing</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form onsubmit="app.JobsController.ListJob()">
+
+                        <div class="modal-body">
+                            <div>
+                                <label for="">Job Title</label>
+                                <input type="text" name="title" class="form-control" minlength="2" required>
+                            </div>
+                            <div>
+                                <label for="">Description</label>
+                                <textarea cols="1" rows="3" type="text" name="description" class="form-control"
+                                    minlength="2" placeholder="Information about the job listing" required></textarea>
+                            </div>
+                            <div>
+                                <label for="">Pay</label>
+                                <input type="number" name="pay" class="form-control" minlength="2" placeholder="$10"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="">Is this Remote?</label>
+                                <input type="checkbox" name="remote" class="form-check">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div id="jobs-list" class="row pt-3">
+        <!-- <div class="col-3 card p-4">
+            <div class="p-1">Job Title</div>
+            <div class="p-1">This is a description</div>
+            <div class="p-1">Pay: $1000</div>
+            <div class="p-1">Remote? <i class="mdi mdi-checkbox-blank-outline"></i></div>
+        </div> -->
+    </div>
+</section>
